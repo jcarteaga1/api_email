@@ -2,11 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const awsConfig = require('./config/aws.js')
+const cors = require('./config/cors');
 const app = express();
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors())
 
 require('./app/routes')(app)
 
