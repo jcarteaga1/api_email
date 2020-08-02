@@ -4,8 +4,8 @@ exports.sendEmail=(req,res)=>{
 
 	var mailOptions = {
 	  from: process.env.Email,
-	  to: req.body.email,
-	  subject: req.body.subject,
+	  to: process.env.AddresseEmail,
+	  subject: 'I want to contact you to carry out my project!',
 	  text: req.body.text
 	};
 
