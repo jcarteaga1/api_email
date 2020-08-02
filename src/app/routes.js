@@ -6,4 +6,8 @@ app
 .route('/sendEmail')
 .post(emailControllers.sendEmail);
 
+app
+.route('/')
+.get(emailControllers.health);
+
 }
